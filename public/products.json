@@ -1,0 +1,39 @@
+[
+  {
+ 
+    "email":"aharif281@gamil.com",
+    "name": "SAMSUNG A72",
+    "price": 35000,
+    "quantity":10,
+    "supplier":"Akash Babu",
+    "img": "https://www.mobiledokan.com/wp-content/uploads/2021/03/Samsung-Galaxy-A72-image.jpg",
+    "text":"Fingerprint (under display, ultrasonic), accelerometer, gyro, proximity, compass, barometer Samsung DeX, Samsung Wireless DeX (desktop experience support)"
+
+  },
+  {
+    "email":"aharif281@gamil.com",
+    "name": "SAMSUMG M2",
+    "price": 26000,
+    "quantity":10,
+    "supplier":"Akash Babu",
+    "img": "https://goprice.com.bd/wp-content/uploads/2021/05/Samsung-Galaxy-M42-5G.jpg",
+    "text":"Armour aluminum frame with tougher drop and scratch resistance (advertised)IP68 dust/water resistant (up to 1.5m for 30 mins)Single SIM (Nano-SIM) or Dual SIM (2 Nano-SIMs + eSIM, dual stand-by)"
+
+  },
+  {
+    "email":"aharif281@gamil.com",
+    "name": "SAMSUMG S22-5G",
+    "price": 46000,
+    "quantity":10,
+    "supplier":"Akash Babu",
+    "img": "https://mobilepricetoday.com/wp-content/uploads/2022/03/Samsung-Galaxy-S22-Ultra-5G-price-in-Bangladesh-6-768x768.png",
+    "text":"Single SIM (Nano-SIM) or Dual SIM (2 Nano-SIMs + eSIM, dual stand-by)IP68 dust/water resistant (up to 1.5m for 30 mins)Armour aluminum frame with tougher drop and scratch resistance (advertised)"
+
+  }
+]
+
+ 	
+
+
+
+

@@ -1,0 +1,85 @@
+.from-container{
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    padding: 20px;
+}
+.from-container h2{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+.submit-btn{
+    border: none;
+    outline: none;
+    background:#187a37;
+    border-radius: 10px;
+    color: blanchedalmond;
+    width: 100%;
+    padding: 7px 0px;
+    text-align:center;
+    font-weight: bold;
+}
+.signup-link{
+    text-decoration: none;
+    color:#FF9900;
+    font-weight: bold;
+
+}
+
+
+.login-text-bg{
+    background: #187a37;
+}
+.login-form-style{
+    border: 5px solid #187a37;
+}
+.login-text h2{
+    color:blanchedalmond;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+.login-text button{
+    background: blanchedalmond;
+    text-align: center;
+    outline: none;
+    border: none;
+   
+    border-radius: 10px;
+    width: 160px;
+    height: 40px;
+}
+.login-text button a{
+    display: block;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+.form-flex-style{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+form input::placeholder{
+
+    font-weight: bold;
+}
+.forget-btn,.forget-submit,.google-btn{
+    background: none;
+    color: black;
+    outline: none;
+    font-weight: bold;
+    border-radius: 10px;
+    border:2px solid #187a37;
+    transition: all .4s;
+}
+.forget-btn:hover,.forget-submit:hover,.google-btn:hover{
+    background:#187a37 ;
+    color: blanchedalmond;
+    transition: all .4s;
+}
+.google{
+    height: 30px;
+    width: 30px;
+    margin-left: 20px;
+}

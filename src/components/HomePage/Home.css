@@ -1,0 +1,125 @@
+.all-products{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 20px;
+}
+.banner-text p{
+    font-weight: 500;
+    font-size: 17px;
+}
+.towtow{
+    font-weight: bold;
+    color:#187a37;
+}
+.banner-text h3{
+    font-weight: bold;
+    padding: 3px 0px;
+}
+.banner-text button{
+    background: #187a37;
+    color: white;
+    outline: none;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 12px;
+    border: none;
+
+}
+.banner-img img{
+    height:500px;
+}
+.clint-review h2{
+    font-size: 20px;
+}
+.clint-review h2 span{
+    font-weight: bold;
+    color:#187a37;
+}
+.review-text{
+    border-radius: 0px 30px 0px 30px;
+    background: #F4F4F4;
+    padding: 20px 20px;
+    height:250px;
+}
+.review-text p{
+    font-style: italic;
+    color: black;
+    
+}
+.customer-identiti img{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+.customer-identiti{
+    display: flex;
+    align-items: center;
+}
+.customer-identiti h5{
+   
+    margin-left: 10px;
+    font-size: 15px;
+    color:#187a37; 
+}
+.footer-header h4{
+    border-bottom: 5px solid #187a37;
+    font-weight: bold;
+    color: white;
+    display: inline-block;
+    text-transform: capitalize;
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+.footer-header ul{
+    
+    padding: 0;
+    margin: 0;
+}
+.footer-header ul li{
+    list-style: none;
+    color: rgba(255, 255, 255, 0.836);
+    line-height: 25px;
+}
+.contact h6{
+    font-weight: bold;
+    color:rgba(255, 255, 255, 0.836); ;
+}
+.contact p{
+
+    color:rgba(255, 255, 255, 0.836); ;
+}
+.copyRight p span{
+    color: #187a37;
+    font-weight: bold;
+}
+
+@media(max-width:992px){
+    .all-products{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 20px;
+    }
+    .review-text{
+        height: 300px;
+    }
+}
+@media(max-width:768px){
+    .all-products{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 20px;
+    }
+}
+@media(max-width:576px){
+    .all-products{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-gap: 20px;
+    }
+    .review-text{
+        height: 220px;
+    }
+    .banner-img img {
+        height: 390px;
+    }
+}
