@@ -17,22 +17,15 @@ const handelSignout = () =>{
 }
     return (
         <div>
-            <Navbar className="py-4" collapseOnSelect expand="lg" bg="dark" variant="dark">
+            <Navbar className="py-3 navbar" collapseOnSelect expand="lg" bg="dark" variant="dark">
   <Container>
-  <Navbar.Brand as={Link} to="/">React-Bootstrap</Navbar.Brand>
+  <Navbar.Brand as={Link} to="/" className='tittle-name'>Mobile Corner</Navbar.Brand>
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className="me-auto">
       <Nav.Link as={Link} to="/addservice">Add Service</Nav.Link>
       <Nav.Link as={Link} to="/manageItems">Mange Items</Nav.Link>
         <Nav.Link as={Link} to="/blogs">Blogs</Nav.Link>
-      <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-        <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-        <NavDropdown.Divider />
-        <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-      </NavDropdown>
     </Nav>
     <Nav>
       {
@@ -42,7 +35,7 @@ const handelSignout = () =>{
       }
     
      {
-       user ? <button onClick={handelSignout} >log Out</button> :  <Nav.Link as={Link} to="/login">
+       user ? <button className='logOut-btn' onClick={handelSignout} >log Out</button> :  <Nav.Link as={Link} to="/login">
        Login
       </Nav.Link>
      }

@@ -1,6 +1,7 @@
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../firebase.init';
+import './Addservice.css'
 
 
 
@@ -37,31 +38,27 @@ const handelform = event =>{
   
 }
     return (
-        <div>
-            <h2>Add service</h2>
+        <div className='container py-5'>
+             <h2 className='mb-2 text-center'>Add <span className='allPHder'>Products</span></h2>
             <div className='row'>
                 <div className='col-md-3'></div>
-                <div className='col-md-6'>
+                <div className='col-md-6 bg-light p-3'>
               <form  onSubmit={handelform}>
         <br/>
         <br/>
-        <input type="text" name='name' placeholder='Product Name' className='form-control'/>
+        <input type="text" name='Product Name' placeholder='Product Name' className='form-control'required/>
         <br/>
+        <input type="number" name='price' placeholder='Price' className='form-control' required/>
         <br/>
-        <input type="number" name='price' placeholder='Price' className='form-control' />
+        <input type="number" name='quantity' placeholder='Quantity' className='form-control' required/>
         <br/>
+        <input type="text" name='supplier' placeholder='Supplier' className='form-control' required/>
         <br/>
-        <input type="number" name='quantity' placeholder='Quantity' className='form-control' />
+        <input type="text" name='img' placeholder='Img-URL' className='form-control' required/>
         <br/>
+        <textarea className='form-control' name="text" id="" cols="10" rows="5" placeholder='Discripation' required></textarea>
         <br/>
-        <input type="text" name='supplier' placeholder='Supplier' className='form-control' />
-        <br/>
-        <br/>
-        <input type="text" name='img' placeholder='img-URL' className='form-control' />
-        <br/>
-        <br/>
-        <textarea className='form-control' name="text" id="" cols="30" rows="10" placeholder='discripation'></textarea>
-        <input type="submit" value ="Add Product"  />
+        <button className='addProduct-btn'>Add Product</button>
       </form>
                 </div>
                 <div className='col-md-3'></div>

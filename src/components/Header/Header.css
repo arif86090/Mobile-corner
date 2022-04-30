@@ -1,11 +1,12 @@
-.header{
-    height: 80px;
-    background-color: #1C2B35;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-left: 140px;
-    padding-right: 140px;
+.navbar{
+    background: #14441e!important;
+}
+.tittle-name{
+    color: white!important;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 25px;
+
 }
 
 .header a{
@@ -15,5 +16,25 @@
     margin-left: 36px;
 }
 .header a:hover{
-    color: orange;
+    color: #187a37;
+}
+.logOut-btn{
+    background: #187a37!important;
+    /* border:2px solid #5f594f; */
+    outline: none;
+    background: none;
+    font-weight: bold;
+    color:white;
+    cursor: pointer;
+    border: none;
+    font-size: 14px;
+    border-radius: 5px;
+   
+}
+
+@media(max-width:768px){
+    .logOut-btn{
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
 }

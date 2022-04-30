@@ -48,7 +48,7 @@ const HomePage = () => {
                <div className='container'>
                     <div className='all-products'>
                         {
-                            products.map(product => <Products
+                            products.slice(0,6).map(product => <Products
                             key={product._id}
                             product={product}
                             ></Products>)
