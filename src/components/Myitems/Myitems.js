@@ -37,6 +37,26 @@ const Myitems = () => {
         
     },[user]);
 
+    const deleteInventory = id =>{
+        const proceed=window.confirm('Are you sure ypu want to Delete');
+        if(proceed){
+            const url=`http://localhost:5000/product/${id}`;
+            fetch(url,{
+                method:'DELETE'
+            })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+          if(data.deletedCount > 0){
+              console.log('delete success full');
+              const remaining= orders.filter(product => product._id !== id);
+              setOrder(remaining);
+          }
+                
+            })
+        }
+    }
+
     return (
         <div className='container py-5'>
              <h2 className='mb-5 text-center'>My <span className='allPHder'>Items</span></h2>
@@ -45,6 +65,7 @@ const Myitems = () => {
                     orders.map(product => <ManageItemsDtls
                     key={product._id}
                     product={product}    
+                    deleteInventory={deleteInventory}
                     ></ManageItemsDtls>)
                 }
             </div>

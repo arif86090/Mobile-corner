@@ -67,11 +67,7 @@ const from =location?.state?.from?.pathname || '/';
     }
 
 
-    // const navigateGoogle =useNavigate();
-    // const googleproIvider=new GoogleAuthProvider();
-
     const loginGoogle = () => {
-        //  signInWithPopup(auth,googleproIvider)
         signInWithGoogle();
         
          

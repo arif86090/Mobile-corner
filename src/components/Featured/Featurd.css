@@ -1,0 +1,28 @@
+.featured-main h2 span{
+    font-weight: bold;
+    color:#187a37;
+}
+.featured-1{
+    background: white;
+    padding: 30px 15px;
+}
+.featured-text h4{
+    font-weight: bold;
+    color:#187a37;
+}
+.featured-text button{
+    margin-top: 10px;
+    background: #187a37;
+    color: white;
+    outline: none;
+    border-radius: 10px;
+    padding:8px  12px;
+    border: none;
+}
+
+@media(max-width:576px){
+    .featured-img img{
+        width:90%;
+    }
+    
+}

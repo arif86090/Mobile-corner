@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useParams } from 'react-router-dom';
@@ -16,7 +17,20 @@ const Inventory = () => {
     },[])
 
     const quantaityUpdate = event =>{
-        const Updatequantaity=event.target.quantaityupdate.value;
+        // const Updatequantaity=event.target.quantaityupdate.value;
+    }
+    const handelDeliverd = async () =>{
+        const productQnty={
+            id:product._id,
+            exist_qty:product.quantity,
+        }
+        try{
+            const {data} =await axios.put(`http://localhost:5000/deliverd`,productQnty);
+            alert('success')
+        }catch(err){
+            alert('error')
+        }
+
     }
 
     return (
@@ -46,7 +60,7 @@ const Inventory = () => {
                                         </form>
                                     </div>
                                     <div className='delivered-btn mt-4 '>
-                                        <button className='bg-danger'>Delivered</button>
+                             <button onClick={handelDeliverd} className='bg-danger'>Delivered</button>
                                     </div>
                               </div>
                             </div>

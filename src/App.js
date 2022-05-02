@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import Addservice from './Addservice/Addservice';
 import './App.css';
 import Blogs from './Blogs/Blogs';
+import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import HomePage from './components/HomePage/HomePage';
 import Inventory from './components/Inventory/Inventory';
@@ -23,11 +24,11 @@ function App() {
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
        <Route path='/myitem' element={
        <RequredAuth>
-        <Myitems></Myitems>
-     </RequredAuth>
+         <Myitems></Myitems>
+       </RequredAuth>
        }></Route>
       
-        <Route path='/inventory/:id' element={
+       <Route path='/inventory/:id' element={
           <RequredAuth>
             <Inventory></Inventory>
           </RequredAuth>
@@ -36,6 +37,7 @@ function App() {
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<Signup></Signup>}></Route>
       </Routes>
+     <Footer></Footer>
     </div>
   );
 }

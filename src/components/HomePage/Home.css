@@ -61,37 +61,7 @@
     font-size: 15px;
     color:#187a37; 
 }
-.footer-header h4{
-    border-bottom: 5px solid #187a37;
-    font-weight: bold;
-    color: white;
-    display: inline-block;
-    text-transform: capitalize;
-    margin-bottom: 5px;
-    font-size: 18px;
-}
-.footer-header ul{
-    
-    padding: 0;
-    margin: 0;
-}
-.footer-header ul li{
-    list-style: none;
-    color: rgba(255, 255, 255, 0.836);
-    line-height: 25px;
-}
-.contact h6{
-    font-weight: bold;
-    color:rgba(255, 255, 255, 0.836); ;
-}
-.contact p{
 
-    color:rgba(255, 255, 255, 0.836); ;
-}
-.copyRight p span{
-    color: #187a37;
-    font-weight: bold;
-}
 
 @media(max-width:992px){
     .all-products{
@@ -101,6 +71,9 @@
     }
     .review-text{
         height: 300px;
+    }
+    .banner-img img {
+        height: 460px;
     }
 }
 @media(max-width:768px){

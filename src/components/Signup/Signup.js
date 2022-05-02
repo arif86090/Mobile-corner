@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { Link, Navigate, useNavigate } from 'react-router-dom';
-import {  useCreateUserWithEmailAndPassword ,useSendEmailVerification} from 
+import {  useCreateUserWithEmailAndPassword} from 
 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import './Signup.css'
@@ -17,10 +17,6 @@ const Signup = () => {
 
 
     const [ createUserWithEmailAndPassword,user,loading]= useCreateUserWithEmailAndPassword(auth,{sendEmailVerification:true});
-
-    // const [sendEmailVerification, sending] = useSendEmailVerification(
-    //     auth
-    //   );
 
     const handelEmail = event =>{
         setEmail(event.target.value);
@@ -62,49 +58,59 @@ const Signup = () => {
     
         event.preventDefault();
         
-        // sendEmailVerification();
     
     }
 
     return (
         <div className='container'>
-            <div className='row mt-5'>
-                <div className='col-md-3'></div>
-                <div className='col-md-6'>
-                    <div className='from-container'>
-                        <h2>Sign up</h2>
-                        <form onSubmit={handelCreatUser} >
-                            <div className="mb-3">
-                                <label for="exampleInputEmail1" className="form-label">Email address</label>
-                                <input onBlur={handelEmail} type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required/>
+          
+ <div className='row py-5 mt-5'>
+    <div className='col-md-2'></div>
+     <div className='col-md-8'>
+        <div className='row '>
+            <div className='col-md-4 login-text-bg form-flex-style'>
+                <div className='login-text text-center py-4'>
+                    <h2>Hell0!!</h2>
+                    <button><Link className='' to='/login'>Signin</Link></button>
+                </div>
+            </div>
+            <div className='col-md-8 login-form-style py-4'>
+                <div className='px-4 py-4'>
+                    <h4 className='text-center fw-bold py-3'>Sign Up Form</h4>
+                <form onSubmit={handelCreatUser}>
+                <div className="mb-3">
+                                <label className="form-label">Email address</label>
+                                <input onBlur={handelEmail} type="email" className="form-control" aria-describedby="emailHelp" required/>
                                
                             </div>
                             <div className="mb-3">
-                                <label for="exampleInputPassword1" className="form-label">Password</label>
-                                <input onBlur={handelPassword } type="password" className="form-control" id="exampleInputPassword1" required/>
+                                <label className="form-label">Password</label>
+                                <input onBlur={handelPassword } type="password" className="form-control" required/>
                             </div>
                             <div className="mb-3">
-                                <label for="exampleInputPassword1" className="form-label">Confirm-Password</label>
-                                <input onBlur={handelconPassword} type="password" className="form-control" id="exampleInputPassword1" required/>
+                                <label  className="form-label">Confirm-Password</label>
+                                <input onBlur={handelconPassword} type="password" className="form-control"  required/>
                             </div>
                             <p className='text-danger'>{error}</p>
 
                             <div className="form-check">
                                 <input onClick={handelAgree} type="checkbox" class="form-check-input" />
-                                <label className={`${agree ? 'text-success' : 'text-danger'}`} for="exampleCheck1">agree with all candition</label>
+                                <label className={`${agree ? 'text-success' : 'text-danger'}`} for="exampleCheck1">Agree with all candition</label>
                             </div>
 
                             <button
                             disabled={!agree}
-                            type="submit" className="submit-btn">{loading ? 'please wait...' : 'signup'}</button>
-                         </form> 
-                         <p className='mt-2'>
-                             Already have an account? <Link className='signup-link' to='/login'>Login</Link>
-                         </p>
-                    </div>
+                            type="submit" className="sigin-btn">{loading ? 'please wait...' : 'signup'}</button>
+                         </form>
+
+
                 </div>
-                <div className='col-md-3'></div>
             </div>
+        </div>
+    </div>
+    <div className='col-md-2'></div>
+</div>
+
         </div>
     );
 };

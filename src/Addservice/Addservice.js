@@ -46,7 +46,7 @@ const handelform = event =>{
               <form  onSubmit={handelform}>
         <br/>
         <br/>
-        <input type="text" name='Product Name' placeholder='Product Name' className='form-control'required/>
+        <input type="text" name='name' placeholder='Product Name' className='form-control'required/>
         <br/>
         <input type="number" name='price' placeholder='Price' className='form-control' required/>
         <br/>
