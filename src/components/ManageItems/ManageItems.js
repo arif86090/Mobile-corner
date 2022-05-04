@@ -13,7 +13,7 @@ const ManageItems = () => {
         },[])
 
         const deleteInventory = id =>{
-            const proceed=window.confirm('Are you sure ypu want to Delete');
+            const proceed=window.confirm('Are you sure you want to Delete');
             if(proceed){
                 const url=`http://localhost:5000/product/${id}`;
                 fetch(url,{
