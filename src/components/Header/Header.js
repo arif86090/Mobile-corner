@@ -23,13 +23,14 @@ const handelSignout = () =>{
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className="me-auto">
-      <Nav.Link as={Link} to="/addservice">Add Service</Nav.Link>
-      <Nav.Link as={Link} to="/manageItems">Mange Items</Nav.Link>
+     
         <Nav.Link as={Link} to="/blogs">Blogs</Nav.Link>
     </Nav>
     <Nav>
       {
         user && <>
+         <Nav.Link as={Link} to="/addservice">Add Product</Nav.Link>
+       <Nav.Link as={Link} to="/manageItems">Mange Items</Nav.Link>
         <Nav.Link as={Link} to="/myitem">My items</Nav.Link>
         </>
       }

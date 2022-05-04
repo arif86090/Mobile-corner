@@ -29,8 +29,8 @@ const HomePage = () => {
                         <div className='banner-text text-center'>
                         <p>New inspriation <span className='towtow'>2022</span></p>
                             <h3>  PHONE MADE FOR YOU!</h3>
-                            <p>treading from mobaila and headphone style collaction</p>
-                            <button>SHOP NOW</button>
+                            <p>treading from mobail and headphone style collaction</p>
+                            <button>ADD NOW</button>
                         </div>
                     </div>
                     <div className='col-md-6 mt-3 text-center'>

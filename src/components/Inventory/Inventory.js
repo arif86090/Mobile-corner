@@ -9,6 +9,7 @@ const Inventory = () => {
     // console.log(user);
     const {id}=useParams();
     const [product,setProduct]=useState([]);
+    const [inputQnty,setinputQnty]=useState(1);
 
     useEffect(() => {
         fetch(`http://localhost:5000/product/${id}`)
@@ -16,9 +17,24 @@ const Inventory = () => {
         .then(data =>setProduct(data))
     },[])
 
-    const quantaityUpdate = event =>{
-        // const Updatequantaity=event.target.quantaityupdate.value;
+
+    const quantaityUpdate = async (event) =>{
+        event.preventDefault();
+        const inputproductQunty = {
+            id:product._id,
+            exist_qty:product.quantity,
+            quantity:inputQnty,
+        }
+        console.log(inputproductQunty)
+        try{
+            const {data} =await axios.put(`http://localhost:5000/updateQunty`,inputproductQunty);
+            alert('success')
+        }catch(err){
+            alert('error')
+        }
     }
+
+
     const handelDeliverd = async () =>{
         const productQnty={
             id:product._id,
@@ -55,8 +71,8 @@ const Inventory = () => {
                                     </div>
                                     <div className='quantaity-update'>
                                         <form className='' onSubmit={quantaityUpdate}>
-                                            <input name='quantaityupdate' type="number" placeholder='quantaity-update'  required />
-                                            <button>Update</button>
+                                            <input  onChange={(e)=>setinputQnty(e.target.value)} type="number" placeholder='quantaity-update'  required />
+                                            <button type='submit'>Update</button>
                                         </form>
                                     </div>
                                     <div className='delivered-btn mt-4 '>

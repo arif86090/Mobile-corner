@@ -2,3 +2,14 @@
     font-weight: bold;
     color: #187a37;
 }
+.add-product-btn{
+    
+    outline: none;
+    border:2px solid  #187a37;
+    padding: 10 20px;
+}
+.add-product-btn a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}

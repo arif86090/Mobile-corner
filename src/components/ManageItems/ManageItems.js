@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import ManageItemsDtls from '../ManageItemsDtls/ManageItemsDtls';
 import './ManageItems.css'
 const ManageItems = () => {
@@ -34,6 +35,7 @@ const ManageItems = () => {
     return (
         <div className='container py-5'>
             <h2 className='mb-5 text-center'>All <span className='allPHder'>Products</span></h2>
+            <button className='add-product-btn py-3'><Link to='/addservice'>Add Product</Link></button>
             <div>
                 <div className='all-products'>
                         {
