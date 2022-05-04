@@ -28,7 +28,7 @@ const Inventory = () => {
         console.log(inputproductQunty)
         try{
             const {data} =await axios.put(`http://localhost:5000/updateQunty`,inputproductQunty);
-            alert('success')
+            alert('Update success')
         }catch(err){
             alert('error')
         }
@@ -42,7 +42,7 @@ const Inventory = () => {
         }
         try{
             const {data} =await axios.put(`http://localhost:5000/deliverd`,productQnty);
-            alert('success')
+            alert('Deliverd success')
         }catch(err){
             alert('error')
         }
