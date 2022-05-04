@@ -10,25 +10,29 @@ const Inventory = () => {
     const {id}=useParams();
     const [product,setProduct]=useState([]);
     const [inputQnty,setinputQnty]=useState(1);
+    const [counts,setCounts]=useState(0);
 
     useEffect(() => {
         fetch(`http://localhost:5000/product/${id}`)
         .then(res => res.json())
         .then(data =>setProduct(data))
-    },[])
+    },[id,counts])
 
 
     const quantaityUpdate = async (event) =>{
         event.preventDefault();
+        const newQnty=Number(product.quantity)+ Number(inputQnty);
+        console.log(newQnty);
+
         const inputproductQunty = {
             id:product._id,
-            exist_qty:product.quantity,
-            quantity:inputQnty,
+            quantity:newQnty,
         }
         console.log(inputproductQunty)
         try{
             const {data} =await axios.put(`http://localhost:5000/updateQunty`,inputproductQunty);
-            alert('Update success')
+            alert('Update success');
+            setCounts(counts+1);
         }catch(err){
             alert('error')
         }
@@ -36,13 +40,16 @@ const Inventory = () => {
 
 
     const handelDeliverd = async () =>{
+        const newQnty=Number(product.quantity)-1;
         const productQnty={
             id:product._id,
-            exist_qty:product.quantity,
+            quantity:newQnty,
         }
+       
         try{
-            const {data} =await axios.put(`http://localhost:5000/deliverd`,productQnty);
+            const {data} =await axios.put(`http://localhost:5000/updateQunty`,productQnty);
             alert('Deliverd success')
+            setCounts(counts+1);
         }catch(err){
             alert('error')
         }

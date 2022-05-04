@@ -6,7 +6,8 @@
     
     outline: none;
     border:2px solid  #187a37;
-    padding: 10 20px;
+    padding: 10px 20px;
+    margin-bottom: 15px;
 }
 .add-product-btn a{
     text-decoration: none;
