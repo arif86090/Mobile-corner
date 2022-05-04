@@ -13,7 +13,7 @@ const Inventory = () => {
     const [counts,setCounts]=useState(0);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/product/${id}`)
+        fetch(`https://secure-refuge-85041.herokuapp.com/product/${id}`)
         .then(res => res.json())
         .then(data =>setProduct(data))
     },[id,counts])
@@ -30,7 +30,7 @@ const Inventory = () => {
         }
         console.log(inputproductQunty)
         try{
-            const {data} =await axios.put(`http://localhost:5000/updateQunty`,inputproductQunty);
+            const {data} =await axios.put(`https://secure-refuge-85041.herokuapp.com/updateQunty`,inputproductQunty);
             alert('Update success');
             setCounts(counts+1);
         }catch(err){
@@ -47,7 +47,7 @@ const Inventory = () => {
         }
        
         try{
-            const {data} =await axios.put(`http://localhost:5000/updateQunty`,productQnty);
+            const {data} =await axios.put(`https://secure-refuge-85041.herokuapp.com/updateQunty`,productQnty);
             alert('Deliverd success')
             setCounts(counts+1);
         }catch(err){

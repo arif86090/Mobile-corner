@@ -22,7 +22,7 @@ const handelform = event =>{
 
     const Addproduct={email,name,price,quantity,supplier,img,text};
 
-    fetch('http://localhost:5000/product',{
+    fetch('https://secure-refuge-85041.herokuapp.com/product',{
         method:'POST',
         headers:{
           'content-type':'application/json'

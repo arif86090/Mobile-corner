@@ -15,7 +15,7 @@ const Myitems = () => {
     useEffect(() => {
         const getOrders= async () => {
             const email=user?.email;
-            const url=`http://localhost:5000/myitems?email=${email}`;
+            const url=`https://secure-refuge-85041.herokuapp.com/myitems?email=${email}`;
           try{
             const {data}=await axios.get(url,{
                 headers:{
@@ -40,7 +40,7 @@ const Myitems = () => {
     const deleteInventory = id =>{
         const proceed=window.confirm('Are you sure ypu want to Delete');
         if(proceed){
-            const url=`http://localhost:5000/product/${id}`;
+            const url=`https://secure-refuge-85041.herokuapp.com/product/${id}`;
             fetch(url,{
                 method:'DELETE'
             })
