@@ -23,7 +23,7 @@ const ManageItems = () => {
                 .then(data => {
                     console.log(data);
               if(data.deletedCount > 0){
-                  console.log('delete success full');
+                  console.log('Delete success full');
                   const remaining= products.filter(product => product._id !== id);
                   setProducts(remaining);
               }
