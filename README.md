@@ -1,6 +1,6 @@
 ### Mobile Corner
 
-live project: [https://assignments-11.netlify.app/](https://assignments-11.netlify.app/);
+live project: [https://assignments-11.netlify.app/](https://assignments-11.netlify.app/)
 * this a Mobile shope website
 * without login you can't show any products details. 
 * useing firebase and firebase hooks.
